@@ -112,7 +112,7 @@ $app->get('/bajas', function (Request $request, Response $response) {
 
 $app->group("/sfe/v1", function(\Slim\App $app){
 
-    $app->get('/comprobante', function(Request $request, Response $response, $args) {
+    $app->post('/comprobante', function(Request $request, Response $response, $args) {
         $result = array("success" => true, "message" => null, "test" => null);
 
         $body = $request->getParsedBody();
